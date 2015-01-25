@@ -4,7 +4,7 @@ The purpose of the project was to create a tidy dataset that could be used for l
 
 The run_anlysis().R script in this repository will generate the tidy dataset file "tidydata.txt" in the users working directory, using the following write.table() function call:
 ```
-write.table(mergedData, "tidydata.txt", row.names=FALSE)
+write.table(tidydata, "tidydata.txt", row.names=FALSE)
 ```
 To read the table run the following (it assumes you are in the same directory as the file "tidydata.txt"):
 ```
