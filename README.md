@@ -37,7 +37,7 @@ Below is the algorithm of the function "run_analysis():
     + "UCI HAR Dataset/featuresSubset.txt" - table containing only the mean and standard deviation features used for subsetting and labeling the feature variables
     + "UCI Har Dataset/activity_labels.txt" - mapping of activity labels to descriptive activity names
 2. Subset the training and test datasets to use only the features found in the featureSubset table
-3. For both the training and datasets, using dplyr, add 2 variables "Activity" and "Subject", using mutate to combine the subject table and activity table, and make these the first to variables in the resulting tables.
+3. For both the training and datasets, using dplyr, add 2 variables "Activity" and "Subject", using mutate to combine the subject table and activity table, and make these the first two variables in the resulting tables.
 4. Merge the two tables (training and test), group by the Activity and Subject factors, then summarize the rest of the features by computing the means of each group, producing a tidydata table.
 5. Change the activity factor values to descriptive names in the tidydata table
 6. Name all the features with their descriptive names in the tidydata table
