@@ -42,3 +42,4 @@ Below is the algorithm of the function "run_analysis():
 5. Change the activity factor values to descriptive names in the tidydata table
 6. Name all the features with their descriptive names in the tidydata table
 7. Write the tidydata table to the file "tidydata.txt"
+8. Output the tidydata table

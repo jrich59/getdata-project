@@ -26,6 +26,7 @@
 # paramter: dataDir: directory containing the "UCI HAR Dataset
 #                       - default value "UCI HAR Dataset" in working directory
 # output file: "tidydata.txt"
+# returns: tidydata table
 library(dplyr)
 run_analysis <- function(dataDir="UCI HAR Dataset") {
     # First read in all the data needed
@@ -97,4 +98,6 @@ run_analysis <- function(dataDir="UCI HAR Dataset") {
     # save the Tidy Table, which can be read back with the read.table() function
     print("Saving file tidydata.txt in your working directory")
     write.table(tidydata, "tidydata.txt", row.names=FALSE)
+    
+    tidydata
 }
