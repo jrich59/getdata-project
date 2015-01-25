@@ -24,7 +24,7 @@ The data was generated from 30 subjects between the age of 19 and 48 performing 
 For more information and details about the UCI-HAR dataset please refer to the file "features_info.txt" in the dataset directory "UCI HAR Dataset"
 
 ### Processed Data:
-The features we are interested in for this analysis, are only the mean and standard deviation over a single window sample for each signal type described above.  I did not include the mean frequency or angle features as these are not just means and standard deviations of the signals themselves.  The subset of features I was interested in were saved in the file "featuresSubset.txt"" stored in the dataset directory, and used to specify the subset of features used in when creating the tidy dataset.  Each feature was averaged for each subject and activity.  Since the values in the original dataset were normalized between -1 and 1 there is no unit of measurement for the features.
+The features we are interested in for this analysis, are only the mean and standard deviation over a single window sample for each signal type described above.  I did not include the mean frequency or angle features as these are not just means and standard deviations of the signals themselves.  The subset of features I was interested in were saved in the file "featuresSubset.txt"" stored in the dataset directory, and used to specify the subset of features used when creating the tidy dataset.  The training and test data tables were merged together and each feature was averaged for each subject and activity.  Since the values in the original dataset were normalized between -1 and 1 there is no unit of measurement for the features.
 
 The resulting summary dataset contains the following features:
 
