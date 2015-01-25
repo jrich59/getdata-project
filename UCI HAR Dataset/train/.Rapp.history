@@ -1,0 +1,140 @@
+install.packages("data.frame")
+install.packages("data.table")
+library(data.table)
+fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
+?fread
+DT <- fread(fileURL)
+download.file(fileURL, "data/hidaho")
+download.file(fileURL, "data/hidaho", method="curl")
+fread("data/hidaho")
+list.files("data")
+download.file(fileURL, "data/hidaho", method="curl")
+fread("data/hidaho")
+DT <- fread("data/hidaho")
+head(DT)
+tapply(DT$pwgtp15,DT$SEX,mean)
+DT[,mean(pwgtp15),by=SEX]
+R.version.string
+install.package("RMySQL")
+install.packages("RMySQL")
+install.packages("sqldf")
+library(sqldf)
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv","amercommsurvey.csv", method="curl")
+acs <- read.csv("amercommsurvey.csv")
+head acs
+head(acs)
+sqldf("select pwgtp1 from acs where AGEP < 50")
+sqldf("select pwgtp1,AGEP from acs where AGEP < 50")
+length(acs)
+dim(acs)
+l50 <- sqldf("select pwgtp1,AGEP from acs where AGEP < 50")
+dim(l50)
+?unique
+uniq <- sqldf("select distinct AGEP from acs")
+dim(uniq)
+uniqsub <- unique(acs$AGEP)
+dim(uniqsub)
+unique(acs$AGEP)
+length(acs$AGEP)
+length(uniqsub)
+con = url("http://biostat.jhsph.edu/~jleek/contact.html")
+htmlCpde = readlines(con)
+htmlCpde = readLines(con)
+close(con)
+htmlCode <- htmlCpde
+head(htmlCode)
+lines <- htmlCode(c(10,20,30,100))
+lines <- htmlCode[c(10,20,30,100)]
+lines
+lines(htmlCode)
+htmlCode
+class(lines)
+list(lines)
+class(lines)
+sapply(lines, nchar)
+library(httr)
+library(httpuv)
+install.packages("httpuv")
+library(httpuv)
+myapp <- oauth_app("github",key="a8ea67ca7ab427d00e73",secret = "a57a2d84a4e828b3478f6b29c96881c7c96d92a3")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+gtoken
+github_token
+req <- GET(https://api.github.com/users/jtleek/repos, gtoken)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req
+library(jsonlite)
+jtleek <- jsonlite::fromJSON(toJSON(req))
+?jsonlite
+install.packages("jsonlite")
+library(jsonlite)
+jtleek <- jsonlite::fromJSON(toJSON(req))
+json1 <- content(req)
+jtleek <- jsonlite::fromJSON(toJSON(json1))
+head(jtleek)
+names(jtleek)
+created <- jtleek[jkleek$name="datasharing", jtleek$created_at]
+created <- jtleek[jkleek$name=="datasharing", jtleek$created_at]
+created <- jtleek[jkleek$name=="datasharing", creatd_at]
+created <- jtleek[jkleek$name=="datasharing", "creatd_at"]
+created <- jtleek[jtleek$name=="datasharing", "created_at"]
+created
+?read.fwf
+noaa <- read.fwf(url="https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for")
+noaa <- read.fwf(url="https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for", widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE)
+noaa <- read.fwf(file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"), widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE)
+noaa <- read.fwf(url="https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for", widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE,method="curl")
+noaa <- read.fwf(file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"), widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE,method="curl")
+?url
+noaa <- read.fwf(file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for", method="curl"), widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE)
+myfile=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for")
+read.fwf(file=myFile,widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE)
+read.fwf(file=myfile,widths=c(9,4,4,4,4,4,4,4,4),headers=TRUE)
+x <- read.fwf(#
+  file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x
+result <- sum(x[,4])
+result
+x <- read.fwf(#
+  file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for",method="curl"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x <- read.fwf(#
+  file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+fileurl <-"https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
+dowload.file(fileurl, "fwksst8110.for", method="curl")
+download.file(fileurl, "fwksst8110.for", method="curl")
+x <- read.fwf(#
+  file=fileurl,#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x <- read.fwf(#
+  file="fwksst8110",#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x <- read.fwf(#
+  file="fwksst8110.for",#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))
+x
+result <- sum(x[,4])
+result
+ls
+ls()
+dir()
+train <- read.table("X_train.txt")
+head(train)
+library(dplyr)
+traindata <- tbl_df(train)
+traindata
+subjects <- read.tabe("subject_train.txt")
+subjects <- read.table("subject_train.txt")
+dim(subjects)
+trainsubjects <- tbl_df(subjects)
+trainsubjects
+?merge
